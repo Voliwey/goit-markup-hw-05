@@ -63,6 +63,7 @@ a {
 .nav-links {
   color: var(--color-texth);
   font-weight: 500;
+  transition: color 250ms var(--time-func);
 }
 
 .team-text {
@@ -74,6 +75,7 @@ a {
 .address-text {
   color: var(--color-textp);
   font-style: normal;
+  transition: color 250ms var(--time-func);
 }
 
 .futures-text {
@@ -107,7 +109,6 @@ a {
   border-radius: 4px;
   color: var(--background-color);
   border-color: transparent;
-  transition: 250ms;
 }
 
 .visually-hidden {
@@ -163,13 +164,13 @@ a {
   padding: 16px 32px;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms var(--time-func);
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--color-hover);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
+
 .first-buttoncolor {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -198,6 +199,10 @@ a {
   order: 1;
   flex-grow: 0;
   cursor: pointer;
+  padding: 12px 24px;
+  transition: background-color 250ms var(--time-func),
+    color 250ms var(--time-func), border 250ms var(--time-func),
+    box-shadow 250ms var(--time-func);
 }
 
 .second-button .future-title {
@@ -231,10 +236,8 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  padding-top: 32px;
-  padding-left: 16px;
-  padding-bottom: 8px;
   color: var(--color-texth);
+  margin-bottom: 8px;
 }
 
 /* =====MAIN===== */
@@ -336,9 +339,6 @@ a {
 .buttons:not(:last-child) {
   margin-right: 24px;
 }
-.buttonslast {
-  padding: 12px 24px;
-}
 
 .projects-list {
   display: flex;
@@ -351,6 +351,8 @@ a {
 .project-content {
   border: 1px solid #eeeeee;
   border-top: none;
+  padding-top: 32px;
+  padding-left: 16px;
   /* #e7e9fc; */
 }
 .project-item {
@@ -361,7 +363,6 @@ a {
 
 .section-text {
   padding-bottom: 32px;
-  padding-left: 16px;
   color: var(--color-textp);
 }
 
@@ -416,6 +417,7 @@ a {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms var(--time-func);
 }
 
 .footer-container-item {
@@ -447,6 +449,7 @@ a {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms var(--time-func);
 }
 .color {
   fill: #ffffff;
@@ -482,13 +485,15 @@ a {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   outline: transparent;
+  transition: border 250ms var(--time-func);
 }
 .customers-color {
   fill: #8e8f99;
+  transition: fill 250ms var(--time-func);
 }
 
-.company-team:hover svg,
-.company-team:focus svg {
+.company-team:hover .customers-color,
+.company-team:focus .customers-color {
   fill: #404bbf;
 }
 
@@ -512,7 +517,6 @@ a {
   outline: transparent;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: 250ms;
 }
 
 /* ------dz 4 -------*/
@@ -524,10 +528,10 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: rgba(46, 47, 66, 0.4);
   width: 100%;
   height: 100%;
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms var(--time-func), visibility 250ms var(--time-func);
   /* настройка бекдропа */
 }
 
@@ -552,6 +556,7 @@ a {
   width: 100%;
   min-height: 576px;
   background-color: #fff;
+  border-radius: 4px;
   /* само модальное окно */
 }
 .modal-btn {
@@ -605,41 +610,15 @@ a {
 }
 
 /* --------HOVER--------- */
+
 .color-x:hover,
 .color-x:focus {
   /* transition: fill transform 2500ms var(--time-func); */
-  transition: 250ms;
   background-color: #404bbf;
   fill: #ffffff;
   border-color: #404bbf;
 }
-.hover-nav:hover,
-.hover-nav:focus {
-  transition: 250ms;
-}
-.hero-btn:hover,
-.hero-btn:focus {
-  transition: 250ms;
-}
 
-.social-link:hover,
-.social-link:focus {
-  transition: 250ms;
-}
-
-.company-team:hover svg,
-.company-team:focus svg {
-  transition: 250ms;
-}
-
-.company-team:hover,
-.company-team:focus {
-  transition: 250ms;
-  border: 1px solid;
-}
-
-.social-links:hover,
-.social-links:focus {
-  transition: 250ms;
-}
 /* --------HOVER------- */
+/* transition: color 250ms var(--time-func);
+transition: color 250ms var(--time-func), border 250ms var(--time-func); */
